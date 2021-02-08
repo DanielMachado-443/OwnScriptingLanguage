@@ -153,7 +153,6 @@ namespace ScriptingTest {
                     }
                     Console.WriteLine("\n");
 
-
                     // SEPARATION // SEPARATION // SEPARATION // SEPARATION // SEPARATION // SEPARATION // SEPARATION // SEPARATION // SEPARATION
 
                     Console.Write("All numbers storage in some variable: ");
