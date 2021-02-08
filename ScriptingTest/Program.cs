@@ -8,19 +8,18 @@ namespace ScriptingTest {
 
             bool bigWhile = true;
 
-            int[] fullInteiros = new int[100];
-            int[] fullInside = new int[100];
-            int[] fullOResults = new int[100];
+            int[] fullInteiros = new int[50];
+            int[] fullInside = new int[50];
+            int[] fullOResults = new int[50];
 
             while (bigWhile) {
 
-                int[] inteiros = new int[100];
-                int[] inside = new int[100];
-                int[] oResults = new int[100];
+                int[] inteiros = new int[50];
+                int[] inside = new int[50];
+                int[] oResults = new int[20];
 
-                string[] variables = new string[100];
-                Dictionary<string, int> oneDic = new Dictionary<string, int>();
-                List<GuardVar> vars = new List<GuardVar>();
+                string[] variables = new string[50];
+                Dictionary<string, int> oneDic = new Dictionary<string, int>();                
 
                 int forEachControl1 = 0;
                 int forEachControl2 = 0;
@@ -33,21 +32,21 @@ namespace ScriptingTest {
                 int controlVariables = 0;
                 int controlOResults = 0;
                 int controlOutR = 0;
-                int controlInteiros = 0;
-                int controlOutside = 0;
+                int controlInteiros = 0;                
 
-                bool isThereSpace = false;
+                bool isThereSpace = false; // doing nothing now
+
                 int howManyPlus = 0;
-                int[] isso = new int[10];
+                int[] isso = new int[20];
 
-                string[] getK = new string[10]; // <<< HERE     || LIMITATION OF POSITIONS
-                int getKControler = 0;
+                string[] getK = new string[10]; // <<< HERE     || LIMITATION OF POSITIONS                
 
                 bool flagOut = false;
-
                 try {
                     Console.WriteLine("\n");
                     string[] clean1 = Console.ReadLine().Split(" ");
+
+                    // FIRST FOREACH BELOW // FIRST FOREACH BELOW // FIRST FOREACH BELOW // FIRST FOREACH BELOW // FIRST FOREACH BELOW // FIRST FOREACH BELOW
 
                     foreach (string str in clean1) {
                         if (str.intTest()) {
@@ -70,7 +69,7 @@ namespace ScriptingTest {
                         forEachControl1++;
                     }
 
-                    // WORKING ABOVE  
+                    // SECOND FOREACH BELOW // SECOND FOREACH BELOW // SECOND FOREACH BELOW // SECOND FOREACH BELOW // SECOND FOREACH BELOW // SECOND FOREACH BELOW 
 
                     foreach (string str in clean1) { // IT IS NECESSARY TWO Foreachs INDEED!!!                        
                         if (str == ">>") {
@@ -94,6 +93,8 @@ namespace ScriptingTest {
                             eoq++;
                         }
                     }
+
+                    // THIRD FOREACH BELOW // THIRD FOREACH BELOW // THIRD FOREACH BELOW // THIRD FOREACH BELOW // THIRD FOREACH BELOW // THIRD FOREACH BELOW
 
                     forEachControl3 = 0;
                     foreach (string str in clean1) { // IT IS NECESSARY TWO Foreachs INDEED!!!                                                
@@ -128,20 +129,22 @@ namespace ScriptingTest {
                                 }
                                 else {
                                     isThereSpace = true;
-                                    controlOResults = 0; // reseting
-                                    controlOutR++;
+                                    controlOResults = 0; // reseting                                           
                                     oResults[controlOutR] = dicSum;
+                                    controlOutR++; // <<< nothing important
+                                    dicSum = 0;
                                 }
                                 forEachControl4++;
                                 forEachControl5 += 2;
-                            }                            
-                            controlOutside = 0;
+                            }                                                        
                             eoq--;
                             flagOut = true;
                         }                        
                         forEachControl3++; // SHOULD MATCH WITH str
                         isThereSpace = false;
-                    }                    
+                    }
+
+                    // END OF LAST FOREACH // END OF LAST FOREACH // END OF LAST FOREACH // END OF LAST FOREACH // END OF LAST FOREACH // END OF LAST FOREACH
 
                     Console.Write("\nAll integer numbers inside the user imput: ");              // <<< NOT BEING USED RIGHT NOW
                     foreach (int intObj in inteiros) {
