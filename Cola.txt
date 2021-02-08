@@ -1,0 +1,51 @@
+fkasdjnfa 12 dfsnakjfsdna 3d sdajknfdas 3 dnfjksdnfkjas 4 sdfkjsdnfa 56 sdfansjkn 77 int d = 13 int j = 29 faskfjsda ndfasjnfas 5 sdfansdj 4 sdfajns 3 dsajfkasn 2 asndjkan 1 d + j int c = 99 int z = 41 c + z
+
+fkasdjnfa 12 dfsnakjfsdna 3d sdajknfdas 3 dnfjksdnfkjas 4 sdfkjsdnfa 56 sdfansjkn 77 int d = 13 int j = 29 faskfjsda ndfasjnfas 5 sdfansdj 4 sdfajns 3 dsajfkasn 2 asndjkan 1 int c = 99 int z = 41 c + z
+
+77 int d = 13 int j = 29 sdfansdj 4 3 2 1 int c = 99 int z = 41 z + j + d + c ! adksjfas 31 dsfas 32 dsfadne e r rf 33 int r = 1 njkdn int k = 2 fdgdsg 95
+
+int d = 13 int j = 29 faskfjsda 5 4 sdfajns 3 2 asndjkan 1 int c = 99 int z = 41 z + j + d + c ! adksjfas 31 dsfas 32 dsfadne 33 int r = 1 njkdn int k = 2 fdgdsg 95 dasc r + k >>
+
+int a = 12 int b = 15 int c = 18 int d = 21 a + b + c + d
+
+try {
+                            if (clean1[forEachControl - 1] == variables[controlVariables - 2] && clean1[forEachControl + 1] == variables[controlVariables - 1]) {
+                                if (oneDic.ContainsKey(variables[controlVariables - 2]) && oneDic.ContainsKey(variables[controlVariables - 1])) {
+                                    int sumR = oneDic[variables[controlVariables - 2]] + oneDic[variables[controlVariables - 1]];
+                                    oResults[controlOResults] = sumR;
+                                    controlOResults++;
+                                }
+                            }
+                            else if (clean1[forEachControl - 1] == variables[controlVariables - 1] && clean1[forEachControl + 1] == variables[controlVariables - 2]) {
+                                if (oneDic.ContainsKey(variables[controlVariables - 1]) && oneDic.ContainsKey(variables[controlVariables - 2])) {
+                                    int sumR = oneDic[variables[controlVariables - 1]] + oneDic[variables[controlVariables - 2]];
+                                    oResults[controlOResults] = sumR;
+                                    controlOResults++;
+                                }
+                            }
+                        }
+
+
+if (str == "+") {
+                            int dicSum = 0;                            
+                            if (controlOResults == 0) {
+                                string aux = clean1[forEachControl - 1];
+                                for (int i = forEachControl; i < clean1.Length; i++) { // ForEachControl MATCHS THE str INDEX IN THE BIG Foreach of Clean1                        
+                                    if (clean1[i] == "+") {   
+                                        if(controlOutside == 0) {
+                                            dicSum += oneDic[aux] + oneDic[clean1[forEachControl + 1]];
+                                        }
+                                        else {
+                                            dicSum += oneDic[clean1[i + 1]];
+                                        }
+                                        controlOResults++;
+                                        controlOutside++;
+                                    }                                    
+                                }                                                                
+                            }                            
+                            oResults[controlOutR] = dicSum;                                                      
+                            controlOutR++;
+                            dicSum = 0;
+                            controlOutside = 0;
+                        }
+                        forEachControl++; // IMPORTANT!!!
